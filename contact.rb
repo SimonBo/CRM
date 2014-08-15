@@ -1,32 +1,26 @@
 class Contact
   attr_accessor :id, :first_name, :last_name, :email, :notes
 
-  def initialize (first_name, last_name, email, notes)
-    @first_name=first_name
-    @last_name=last_name
-    @email=email
-    @notes=notes
+  def initialize
+    
   end
 
   def add_new_contact
     puts "Add a contact"
     puts "First name"
-    first_name=gets.chomp
+    @first_name=gets.chomp
     puts "Last name"
-    last_name=gets.chomp
+    @last_name=gets.chomp
     puts "Email"
-    email=gets.chomp
+    @email=gets.chomp
     puts "Notes"
-    notes=gets.chomp 
+    @notes=gets.chomp 
 
-    contact = Contact.new(first_name, last_name, email, notes)
-    @rolodex.add_contact(contact)
-    puts "Added #{contact.id} #{contact.first_name} to rolodex"
 
   end
 
   def modify
-    puts "Modify"
+    
     puts "What do you want to modify?"
     attribute = gets.chomp
     puts "Are you sure you want to modify #{attribute}?"

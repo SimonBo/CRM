@@ -37,18 +37,9 @@ class CRM
 
   def call_option(input)
     if input == 1
-      # add_new_contact
-      puts "Add a contact"
-      puts "First name"
-      first_name=gets.chomp
-      puts "Last name"
-      last_name=gets.chomp
-      puts "Email"
-      email=gets.chomp
-      puts "Notes"
-      notes=gets.chomp 
+      contact = Contact.new
+      contact.add_new_contact
 
-      contact = Contact.new(first_name, last_name, email, notes)
       @rolodex.add_contact(contact)
       puts "Added #{contact.id} #{contact.first_name} to rolodex"
         
